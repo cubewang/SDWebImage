@@ -66,7 +66,7 @@ static NSString *const kCompletedCallbackKey = @"completed";
 {
     if ((self = [super init]))
     {
-        _executionOrder = SDWebImageDownloaderFIFOExecutionOrder;
+        _executionOrder = SDWebImageDownloaderLIFOExecutionOrder;
         _downloadQueue = NSOperationQueue.new;
         _downloadQueue.maxConcurrentOperationCount = 2;
         _URLCallbacks = NSMutableDictionary.new;
